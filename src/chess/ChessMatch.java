@@ -53,7 +53,12 @@ public class ChessMatch
 	{
 		if(!board.thereIsAPiece(position))
 		{
-			throw new ChessException("There is no pece on sourse position !");
+			throw new ChessException("There is no piece on sourse position !");
+		}
+		
+		if(!board.piece(position).isThereAnyPossibleMove())
+		{
+			throw new ChessException("There is no possible moves for the chose piece !");
 		}
 	}
 	
