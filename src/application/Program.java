@@ -28,6 +28,11 @@ public class Program
 				System.out.println("sourse");			
 				ChessPosition sourse=UI.readChessPosition(sc);
 				
+				boolean[][] possibleMoves=chessMatch.possibleMoves(sourse);
+				UI.clearScreen();
+				
+				UI.printBoard(chessMatch.getPieces(),possibleMoves);
+				
 				System.out.println();
 				
 				System.out.println("target");

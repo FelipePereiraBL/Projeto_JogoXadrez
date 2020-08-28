@@ -32,6 +32,15 @@ public class ChessMatch
 		return mat;
 	}
 	
+	public boolean[][] possibleMoves(ChessPosition soursePosition)
+	{
+		Position position=soursePosition.toPosition();
+		
+		validateSoursePosition(position);
+		
+		return board.piece(position).possibleMoves();
+	}
+	
 	public ChessPiece performChessMove(ChessPosition soursePosition,ChessPosition targetPosition)
 	{
 		Position sourse=soursePosition.toPosition();
