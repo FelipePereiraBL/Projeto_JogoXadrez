@@ -29,7 +29,7 @@ public class Program
 				
 				System.out.println();
 				
-				System.out.println("sourse");			
+				System.out.print("sourse:");			
 				ChessPosition sourse=UI.readChessPosition(sc);
 				
 				boolean[][] possibleMoves=chessMatch.possibleMoves(sourse);
@@ -39,7 +39,7 @@ public class Program
 				
 				System.out.println();
 				
-				System.out.println("target");
+				System.out.print("target:");
 				ChessPosition target=UI.readChessPosition(sc);
 				
 				ChessPiece capturedPiece=chessMatch.performChessMove(sourse, target); 
